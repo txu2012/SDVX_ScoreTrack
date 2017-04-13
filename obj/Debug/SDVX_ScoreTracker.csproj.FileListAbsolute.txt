@@ -1,0 +1,12 @@
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.exe.config
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.exe
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.pdb
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.Form1.resources
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.Properties.Resources.resources
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.csproj.GenerateResource.Cache
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.exe
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.pdb
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.UserControl1.resources
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SavedSongs\AllSongs.txt
+C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SavedSongs\PlayedSongs.txt
