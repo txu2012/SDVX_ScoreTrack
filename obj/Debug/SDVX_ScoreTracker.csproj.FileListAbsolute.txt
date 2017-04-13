@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.exe.config
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.exe
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.pdb
@@ -10,3 +11,5 @@ C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\De
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.UserControl1.resources
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SavedSongs\AllSongs.txt
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SavedSongs\PlayedSongs.txt
+=======
+>>>>>>> 742b8e29456a7784de4671a6d4e25363a655f9e7

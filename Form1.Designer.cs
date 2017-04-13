@@ -122,7 +122,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SDVX_ScoreTracker.Properties.Resources.sdvx42;
+//            this.pictureBox1.Image = global::SDVX_ScoreTracker.Properties.Resources.sdvx42;
             this.pictureBox1.Location = new System.Drawing.Point(216, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(268, 104);
