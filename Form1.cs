@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace SDVX_ScoreTracker
 {
-    public partial class Form1 : Form
+    public partial class Layout : Form
     {
         //private float totalNotes;
         //private long totalScore = 10000000;
         private long currentScore;
         private string currentGrade;
         private string currentSongName;
+        private string currentDif;
+        private string currentRomaji;
+        private int currentLevel;
         private CalculatorGrade calcGrade;
         private SongInfoRead songs;
         private Dictionary<string, Song> dictSongs;
@@ -24,7 +27,7 @@ namespace SDVX_ScoreTracker
         private Dictionary<string, SongInfoControl> allUserControl;
         private Dictionary<string, SongInfoControl> playedUserControl;
 
-        public Form1()
+        public Layout()
         {
             dictSongs = new Dictionary<string, Song>();
             dictPlayedSongs = new Dictionary<string, Song>();
@@ -47,6 +50,42 @@ namespace SDVX_ScoreTracker
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            if(songName.Text == "")
+            {
+                MessageBox.Show("Must add song name");
+            }
+            else
+            {
+                currentSongName = songName.Text;
+            }
+
+            if (levelBox.Text == "")
+            {
+                currentLevel = 0;
+            }
+            else
+            {
+                currentLevel = Convert.ToInt32(levelBox.Text);
+            }
+
+            if (difBox.Text == "")
+            {
+                currentDif = "Dif";
+            }
+            else
+            {
+                currentDif = difBox.Text;
+            }
+
+            if (romajiBox.Text == "")
+            {
+                currentRomaji = " ";
+            }
+            else
+            {
+                currentRomaji = romajiBox.Text;
+            }
+
             getScoreAndGrade();
 
             Song getAllSong;
@@ -59,7 +98,7 @@ namespace SDVX_ScoreTracker
             }
             else
             {
-                getAllSong = new Song(" ", currentSongName, 0, "dif", currentScore, currentGrade);
+                getAllSong = new Song(currentSongName, currentRomaji, currentLevel, currentDif, currentScore, currentGrade);
             }
             dictSongs[currentSongName.ToLower()] = getAllSong;
 
@@ -71,7 +110,7 @@ namespace SDVX_ScoreTracker
             }
             else
             {
-                getPlayedSong = new Song(" ", currentSongName, 0, "dif", currentScore, currentGrade);
+                getPlayedSong = new Song(currentSongName, currentRomaji, currentLevel, currentDif, currentScore, currentGrade);
             }
 
             dictPlayedSongs[currentSongName.ToLower()] = getPlayedSong;
@@ -82,11 +121,6 @@ namespace SDVX_ScoreTracker
         private void getScoreAndGrade()
         {
             float crit, near, error;
-
-            if (songName.Text == "")
-            {
-                MessageBox.Show("Must add song name");
-            }
 
             if (criticalNum.Text == "")
             {
@@ -157,7 +191,7 @@ namespace SDVX_ScoreTracker
                 };
 
                 flowLayoutPanel1.Controls.Add(played);
-                playedUserControl.Add(songEntry.getRomaji().ToLower(), played);
+                playedUserControl.Add(songEntry.getName().ToLower(), played);
                 played = null;
 
             }
@@ -171,7 +205,7 @@ namespace SDVX_ScoreTracker
                 };
 
                 flowLayoutPanel2.Controls.Add(played);
-                allUserControl.Add(songEntry.getRomaji().ToLower(), played);
+                allUserControl.Add(songEntry.getName().ToLower(), played);
                 played = null;
 
             }
@@ -186,10 +220,12 @@ namespace SDVX_ScoreTracker
         private void updateDisplay(Song updatedSong)
         {
             SongInfoControl updateAllPlayed;
+
             bool checkUpdatedAll = false;
-            if (allUserControl.TryGetValue(updatedSong.getRomaji().ToLower(), out updateAllPlayed))
+            if (allUserControl.TryGetValue(updatedSong.getName().ToLower(), out updateAllPlayed))
             {
                 updateAllPlayed.setNewInfo(updatedSong.getScore(), updatedSong.getGrade());
+                allUserControl[updatedSong.getName().ToLower()] = updateAllPlayed;
                 checkUpdatedAll = true;
             }
             else
@@ -201,31 +237,54 @@ namespace SDVX_ScoreTracker
                 };
 
                 flowLayoutPanel2.Controls.Add(played);
-                allUserControl.Add(updatedSong.getRomaji().ToLower(), played);
+                allUserControl.Add(updatedSong.getName().ToLower(), played);
                 played = null;
             }
 
             SongInfoControl updatePlayedSong;
-            if (playedUserControl.TryGetValue(updatedSong.getRomaji().ToLower(), out updatePlayedSong))
+            if (playedUserControl.TryGetValue(updatedSong.getName().ToLower(), out updatePlayedSong))
             {
                 updatePlayedSong.setNewInfo(updatedSong.getScore(), updatedSong.getGrade());
+
+                //flowLayoutPanel1.Controls.Add(newControl);
+                playedUserControl[updatedSong.getName().ToLower()] = updatePlayedSong;
             }
             else
             {
                 if (checkUpdatedAll)
                 {
-                    flowLayoutPanel1.Controls.Add(updateAllPlayed);
-                }
-                SongInfoControl played = new SongInfoControl(updatedSong.getName(), updatedSong.getRomaji(),
-                            updatedSong.getLevel(), updatedSong.getDif(), updatedSong.getScore(), updatedSong.getGrade())
-                {
-                    Parent = flowLayoutPanel1
-                };
+                    allUserControl.TryGetValue(updatedSong.getName().ToLower(), out updateAllPlayed);
+                    SongInfoControl newControl = new SongInfoControl(updateAllPlayed.getName(), updateAllPlayed.getRomaji(), updateAllPlayed.getLevel(),
+                            updateAllPlayed.getDif(), updatedSong.getScore(), updatedSong.getGrade())
+                    { Parent = flowLayoutPanel1 };
 
-                flowLayoutPanel1.Controls.Add(played);
-                playedUserControl.Add(updatedSong.getRomaji().ToLower(), played);
-                played = null;
+                    flowLayoutPanel1.Controls.Add(newControl);
+                    playedUserControl.Add(updatedSong.getName().ToLower(), newControl);
+                    checkUpdatedAll = false;
+                }
+                else
+                {
+                    SongInfoControl played = new SongInfoControl(updatedSong.getName(), updatedSong.getRomaji(),
+                                updatedSong.getLevel(), updatedSong.getDif(), updatedSong.getScore(), updatedSong.getGrade())
+                    {
+                        Parent = flowLayoutPanel1
+                    };
+
+                    flowLayoutPanel1.Controls.Add(played);
+                    playedUserControl.Add(updatedSong.getName().ToLower(), played);
+                    played = null;
+                }
             }
+            /*
+            if(updateAllPlayed != null)
+            {
+                updateAllPlayed.remove();
+            }
+
+            if(updatePlayedSong != null)
+            {
+                updatePlayedSong.remove();
+            }*/
         }
     }
 }

@@ -37,13 +37,13 @@ namespace SDVX_ScoreTracker
                         if (separated.Length == 6)
                         {
                             eachSong = new Song(separated[0], separated[1], Convert.ToInt32(separated[2]), separated[3], Convert.ToInt64(separated[4]), separated[5]);
-                            allSong.Add(eachSong.songName.ToLower(), eachSong);
+                            allSong.Add(eachSong.getName().ToLower(), eachSong);
                         }
 
                         else if (separated.Length == 5)
                         {
                             eachSong = new Song(" ", separated[0], Convert.ToInt32(separated[1]), separated[2], Convert.ToInt64(separated[3]), separated[4]);
-                            allSong.Add(eachSong.songName.ToLower(), eachSong);
+                            allSong.Add(eachSong.getName().ToLower(), eachSong);
                         }
                     }
                 }
