@@ -43,7 +43,7 @@ namespace SDVX_ScoreTracker
                         else if (separated.Length == 5)
                         {
                             eachSong = new Song(" ", separated[0], Convert.ToInt32(separated[1]), separated[2], Convert.ToInt64(separated[3]), separated[4]);
-                            allSong.Add(eachSong.getName().ToLower(), eachSong);
+                            allSong.Add(eachSong.getRomaji().ToLower(), eachSong);
                         }
                     }
                 }

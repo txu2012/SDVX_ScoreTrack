@@ -52,7 +52,7 @@ namespace SDVX_ScoreTracker
         {
             if(songName.Text == "")
             {
-                MessageBox.Show("Must add song name");
+                MessageBox.Show("Must add song name, romaji is optional");
             }
             else
             {
@@ -286,5 +286,6 @@ namespace SDVX_ScoreTracker
                 updatePlayedSong.remove();
             }*/
         }
+
     }
 }

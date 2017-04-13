@@ -10,3 +10,15 @@ C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\De
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\bin\Debug\SavedSongs\PlayedSongs.txt
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.SongInfoControl.resources
 C:\Users\Tony\Desktop\Projects\CSharp\SDVX_ScoreTracker\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.Layout.resources
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.exe.config
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.exe
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.pdb
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\bin\Debug\SavedSongs\AllSongs.txt
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\bin\Debug\SavedSongs\PlayedSongs.txt
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.exe
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\bin\Debug\SDVX_ScoreTracker.pdb
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.csprojResolveAssemblyReference.cache
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.Layout.resources
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.Properties.Resources.resources
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.SongInfoControl.resources
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.csproj.GenerateResource.Cache

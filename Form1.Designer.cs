@@ -30,6 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.calc = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.romajiBox = new System.Windows.Forms.TextBox();
+            this.difLabel = new System.Windows.Forms.Label();
+            this.levelLabel = new System.Windows.Forms.Label();
+            this.difBox = new System.Windows.Forms.TextBox();
+            this.levelBox = new System.Windows.Forms.TextBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.songNameLabel = new System.Windows.Forms.Label();
             this.songName = new System.Windows.Forms.TextBox();
@@ -49,12 +55,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.playedSongs = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.levelBox = new System.Windows.Forms.TextBox();
-            this.difBox = new System.Windows.Forms.TextBox();
-            this.levelLabel = new System.Windows.Forms.Label();
-            this.difLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.romajiBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.calc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +105,57 @@
             this.calc.Text = "Score Calculator";
             this.calc.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(335, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Song Romaji :";
+            // 
+            // romajiBox
+            // 
+            this.romajiBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.romajiBox.Location = new System.Drawing.Point(456, 191);
+            this.romajiBox.Name = "romajiBox";
+            this.romajiBox.Size = new System.Drawing.Size(131, 20);
+            this.romajiBox.TabIndex = 20;
+            // 
+            // difLabel
+            // 
+            this.difLabel.AutoSize = true;
+            this.difLabel.Location = new System.Drawing.Point(355, 265);
+            this.difLabel.Name = "difLabel";
+            this.difLabel.Size = new System.Drawing.Size(53, 13);
+            this.difLabel.TabIndex = 19;
+            this.difLabel.Text = "Difficulty :";
+            // 
+            // levelLabel
+            // 
+            this.levelLabel.AutoSize = true;
+            this.levelLabel.Location = new System.Drawing.Point(369, 228);
+            this.levelLabel.Name = "levelLabel";
+            this.levelLabel.Size = new System.Drawing.Size(39, 13);
+            this.levelLabel.TabIndex = 18;
+            this.levelLabel.Text = "Level :";
+            // 
+            // difBox
+            // 
+            this.difBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.difBox.Location = new System.Drawing.Point(456, 265);
+            this.difBox.Name = "difBox";
+            this.difBox.Size = new System.Drawing.Size(131, 20);
+            this.difBox.TabIndex = 17;
+            // 
+            // levelBox
+            // 
+            this.levelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.levelBox.Location = new System.Drawing.Point(456, 228);
+            this.levelBox.Name = "levelBox";
+            this.levelBox.Size = new System.Drawing.Size(131, 20);
+            this.levelBox.TabIndex = 16;
+            // 
             // saveButton
             // 
             this.saveButton.Location = new System.Drawing.Point(409, 319);
@@ -126,10 +177,10 @@
             // 
             // songName
             // 
-            this.songName.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.songName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.songName.Location = new System.Drawing.Point(456, 153);
             this.songName.Name = "songName";
-            this.songName.Size = new System.Drawing.Size(131, 22);
+            this.songName.Size = new System.Drawing.Size(131, 20);
             this.songName.TabIndex = 13;
             // 
             // pictureBox1
@@ -216,26 +267,26 @@
             // 
             // errorNum
             // 
-            this.errorNum.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorNum.Location = new System.Drawing.Point(160, 228);
             this.errorNum.Name = "errorNum";
-            this.errorNum.Size = new System.Drawing.Size(131, 22);
+            this.errorNum.Size = new System.Drawing.Size(131, 20);
             this.errorNum.TabIndex = 3;
             // 
             // nearNum
             // 
-            this.nearNum.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nearNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nearNum.Location = new System.Drawing.Point(160, 191);
             this.nearNum.Name = "nearNum";
-            this.nearNum.Size = new System.Drawing.Size(131, 22);
+            this.nearNum.Size = new System.Drawing.Size(131, 20);
             this.nearNum.TabIndex = 2;
             // 
             // criticalNum
             // 
-            this.criticalNum.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.criticalNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.criticalNum.Location = new System.Drawing.Point(160, 153);
             this.criticalNum.Name = "criticalNum";
-            this.criticalNum.Size = new System.Drawing.Size(131, 22);
+            this.criticalNum.Size = new System.Drawing.Size(131, 20);
             this.criticalNum.TabIndex = 0;
             // 
             // allSongs
@@ -244,27 +295,27 @@
             this.allSongs.Location = new System.Drawing.Point(4, 22);
             this.allSongs.Name = "allSongs";
             this.allSongs.Padding = new System.Windows.Forms.Padding(3);
-            this.allSongs.Size = new System.Drawing.Size(702, 492);
+            this.allSongs.Size = new System.Drawing.Size(702, 501);
             this.allSongs.TabIndex = 1;
             this.allSongs.Text = "All Songs";
             this.allSongs.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel2
             // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(699, 489);
             this.flowLayoutPanel2.TabIndex = 0;
             this.flowLayoutPanel2.WrapContents = false;
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             // 
             // playedSongs
             // 
             this.playedSongs.Controls.Add(this.flowLayoutPanel1);
             this.playedSongs.Location = new System.Drawing.Point(4, 22);
             this.playedSongs.Name = "playedSongs";
-            this.playedSongs.Size = new System.Drawing.Size(702, 492);
+            this.playedSongs.Size = new System.Drawing.Size(702, 501);
             this.playedSongs.TabIndex = 2;
             this.playedSongs.Text = "Played Songs";
             this.playedSongs.UseVisualStyleBackColor = true;
@@ -278,57 +329,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(693, 495);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
-            // 
-            // levelBox
-            // 
-            this.levelBox.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.levelBox.Location = new System.Drawing.Point(456, 228);
-            this.levelBox.Name = "levelBox";
-            this.levelBox.Size = new System.Drawing.Size(131, 22);
-            this.levelBox.TabIndex = 16;
-            // 
-            // difBox
-            // 
-            this.difBox.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.difBox.Location = new System.Drawing.Point(456, 265);
-            this.difBox.Name = "difBox";
-            this.difBox.Size = new System.Drawing.Size(131, 22);
-            this.difBox.TabIndex = 17;
-            // 
-            // levelLabel
-            // 
-            this.levelLabel.AutoSize = true;
-            this.levelLabel.Location = new System.Drawing.Point(369, 228);
-            this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(39, 13);
-            this.levelLabel.TabIndex = 18;
-            this.levelLabel.Text = "Level :";
-            // 
-            // difLabel
-            // 
-            this.difLabel.AutoSize = true;
-            this.difLabel.Location = new System.Drawing.Point(355, 265);
-            this.difLabel.Name = "difLabel";
-            this.difLabel.Size = new System.Drawing.Size(53, 13);
-            this.difLabel.TabIndex = 19;
-            this.difLabel.Text = "Difficulty :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Song Romaji :";
-            // 
-            // romajiBox
-            // 
-            this.romajiBox.Font = new System.Drawing.Font("Bitstream Cyberbit", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.romajiBox.Location = new System.Drawing.Point(456, 191);
-            this.romajiBox.Name = "romajiBox";
-            this.romajiBox.Size = new System.Drawing.Size(131, 22);
-            this.romajiBox.TabIndex = 20;
             // 
             // Layout
             // 
