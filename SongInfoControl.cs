@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SDVX_ScoreTracker
 {
-    public partial class UserControl1 : UserControl
+    public partial class SongInfoControl : UserControl
     {
         //private string name;
         /*public UserControl1(string song, long score, string grade)
@@ -22,7 +22,7 @@ namespace SDVX_ScoreTracker
             Grade.Text = grade;
         }*/
 
-        public UserControl1(string song, string romaji, int lvl, string dif, long score, string grade)
+        public SongInfoControl(string song, string romaji, int lvl, string dif, long score, string grade)
         {
             InitializeComponent();
             Song_Name.Text = song;

@@ -21,15 +21,15 @@ namespace SDVX_ScoreTracker
         private SongInfoRead songs;
         private Dictionary<string, Song> dictSongs;
         private Dictionary<string, Song> dictPlayedSongs;
-        private Dictionary<string, UserControl1> allUserControl;
-        private Dictionary<string, UserControl1> playedUserControl;
+        private Dictionary<string, SongInfoControl> allUserControl;
+        private Dictionary<string, SongInfoControl> playedUserControl;
 
         public Form1()
         {
             dictSongs = new Dictionary<string, Song>();
             dictPlayedSongs = new Dictionary<string, Song>();
-            allUserControl = new Dictionary<string, UserControl1>();
-            playedUserControl = new Dictionary<string, UserControl1>();
+            allUserControl = new Dictionary<string, SongInfoControl>();
+            playedUserControl = new Dictionary<string, SongInfoControl>();
 
             calcGrade = new CalculatorGrade();
             songs = new SongInfoRead();
@@ -151,7 +151,7 @@ namespace SDVX_ScoreTracker
             foreach(var entry in dictPlayedSongs)
             {
                 Song songEntry = entry.Value;
-                UserControl1 played = new UserControl1(songEntry.getName(), songEntry.getRomaji(), songEntry.getLevel(), songEntry.getDif(), songEntry.getScore(), songEntry.getGrade())
+                SongInfoControl played = new SongInfoControl(songEntry.getName(), songEntry.getRomaji(), songEntry.getLevel(), songEntry.getDif(), songEntry.getScore(), songEntry.getGrade())
                 {
                     Parent = flowLayoutPanel1,
                 };
@@ -165,7 +165,7 @@ namespace SDVX_ScoreTracker
             foreach (var entry in dictSongs)
             {
                 Song songEntry = entry.Value;
-                UserControl1 played = new UserControl1(songEntry.getName(), songEntry.getRomaji(), songEntry.getLevel(), songEntry.getDif(), songEntry.getScore(), songEntry.getGrade())
+                SongInfoControl played = new SongInfoControl(songEntry.getName(), songEntry.getRomaji(), songEntry.getLevel(), songEntry.getDif(), songEntry.getScore(), songEntry.getGrade())
                 {
                     Parent = flowLayoutPanel2,
                 };
@@ -185,7 +185,7 @@ namespace SDVX_ScoreTracker
 
         private void updateDisplay(Song updatedSong)
         {
-            UserControl1 updateAllPlayed;
+            SongInfoControl updateAllPlayed;
             bool checkUpdatedAll = false;
             if (allUserControl.TryGetValue(updatedSong.getRomaji().ToLower(), out updateAllPlayed))
             {
@@ -194,7 +194,7 @@ namespace SDVX_ScoreTracker
             }
             else
             {
-                UserControl1 played = new UserControl1(updatedSong.getName(), updatedSong.getRomaji(),
+                SongInfoControl played = new SongInfoControl(updatedSong.getName(), updatedSong.getRomaji(),
                             updatedSong.getLevel(), updatedSong.getDif(), updatedSong.getScore(), updatedSong.getGrade())
                 {
                     Parent = flowLayoutPanel2
@@ -205,7 +205,7 @@ namespace SDVX_ScoreTracker
                 played = null;
             }
 
-            UserControl1 updatePlayedSong;
+            SongInfoControl updatePlayedSong;
             if (playedUserControl.TryGetValue(updatedSong.getRomaji().ToLower(), out updatePlayedSong))
             {
                 updatePlayedSong.setNewInfo(updatedSong.getScore(), updatedSong.getGrade());
@@ -216,7 +216,7 @@ namespace SDVX_ScoreTracker
                 {
                     flowLayoutPanel1.Controls.Add(updateAllPlayed);
                 }
-                UserControl1 played = new UserControl1(updatedSong.getName(), updatedSong.getRomaji(),
+                SongInfoControl played = new SongInfoControl(updatedSong.getName(), updatedSong.getRomaji(),
                             updatedSong.getLevel(), updatedSong.getDif(), updatedSong.getScore(), updatedSong.getGrade())
                 {
                     Parent = flowLayoutPanel1

@@ -1,6 +1,6 @@
 ﻿namespace SDVX_ScoreTracker
 {
-    partial class UserControl1
+    partial class SongInfoControl
     {
         /// <summary> 
         /// Required designer variable.
