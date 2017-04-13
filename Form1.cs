@@ -12,8 +12,6 @@ namespace SDVX_ScoreTracker
 {
     public partial class Layout : Form
     {
-        //private float totalNotes;
-        //private long totalScore = 10000000;
         private long currentScore;
         private string currentGrade;
         private string currentSongName;
@@ -209,12 +207,6 @@ namespace SDVX_ScoreTracker
                 played = null;
 
             }
-            /*
-            flowLayoutPanel1.Controls.Add(
-                new UserControl1(songName.Text, currentScore, currentGrade)
-                {
-                    Parent = flowLayoutPanel1
-                });*/
         }
 
         private void updateDisplay(Song updatedSong)
@@ -246,7 +238,6 @@ namespace SDVX_ScoreTracker
             {
                 updatePlayedSong.setNewInfo(updatedSong.getScore(), updatedSong.getGrade());
 
-                //flowLayoutPanel1.Controls.Add(newControl);
                 playedUserControl[updatedSong.getName().ToLower()] = updatePlayedSong;
             }
             else
@@ -275,16 +266,6 @@ namespace SDVX_ScoreTracker
                     played = null;
                 }
             }
-            /*
-            if(updateAllPlayed != null)
-            {
-                updateAllPlayed.remove();
-            }
-
-            if(updatePlayedSong != null)
-            {
-                updatePlayedSong.remove();
-            }*/
         }
 
     }
