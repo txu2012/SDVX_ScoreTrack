@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
+using System.IO;
 
 namespace SDVX_ScoreTracker
 {
@@ -25,6 +27,9 @@ namespace SDVX_ScoreTracker
         private Dictionary<string, SongInfoControl> allUserControl;
         private Dictionary<string, SongInfoControl> playedUserControl;
 
+        /*
+         * Constructor
+         * */
         public Layout()
         {
             dictSongs = new Dictionary<string, Song>();
@@ -113,9 +118,13 @@ namespace SDVX_ScoreTracker
 
             dictPlayedSongs[currentSongName.ToLower()] = getPlayedSong;
             updateDisplay(getPlayedSong);
+            saveToFile();
 
         }
 
+        /*
+         * Gets the score and grade from the textboxes
+         * */
         private void getScoreAndGrade()
         {
             float crit, near, error;
@@ -171,6 +180,9 @@ namespace SDVX_ScoreTracker
             gradeVal.Text = currentGrade;
         }
 
+        /*
+         * Resets the score, grade, and song name
+         * */
         private void reset()
         {
             currentGrade = "D";
@@ -178,6 +190,9 @@ namespace SDVX_ScoreTracker
             currentSongName = " ";
         }
 
+        /*
+         * Displays the songs from the file
+         * */
         private void displaySongs()
         {
             foreach(var entry in dictPlayedSongs)
@@ -209,6 +224,9 @@ namespace SDVX_ScoreTracker
             }
         }
 
+        /*
+         * Updates the list of played songs and all songs with new score and grade
+         * */
         private void updateDisplay(Song updatedSong)
         {
             SongInfoControl updateAllPlayed;
@@ -268,5 +286,48 @@ namespace SDVX_ScoreTracker
             }
         }
 
+        /*
+         * Saves dictionary of songs to file
+         * */
+        private void saveToFile()
+        {
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"SavedSongs\AllSongs.txt");
+            using (StreamWriter newTask = new StreamWriter(path, false))
+            {
+                foreach (var entry in dictSongs)
+                {
+                    Song getSong = entry.Value;
+                    if (getSong.getRomaji() != "")
+                    {
+                        string writing = getSong.getName() + " " + getSong.getRomaji() + " " + getSong.getLevel() + " " + getSong.getDif() + " " +
+                            getSong.getScore() + " " + getSong.getGrade();
+                    }
+                    else
+                    {
+                        string writing = getSong.getName() + " " + getSong.getLevel() + " " + getSong.getDif() + " " +
+                            getSong.getScore() + " " + getSong.getGrade();
+                    }
+                }
+            }
+
+            string pathPlayed = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"SavedSongs\PlayedSongs.txt");
+            using (StreamWriter newTask = new StreamWriter(pathPlayed, false))
+            {
+                foreach (var entryPlayed in dictPlayedSongs)
+                {
+                    Song getSong = entryPlayed.Value;
+                    if (getSong.getRomaji() != "")
+                    {
+                        string writing = getSong.getName() + " " + getSong.getRomaji() + " " + getSong.getLevel() + " " + getSong.getDif() + " " +
+                            getSong.getScore() + " " + getSong.getGrade();
+                    }
+                    else
+                    {
+                        string writing = getSong.getName() + " " + getSong.getLevel() + " " + getSong.getDif() + " " +
+                            getSong.getScore() + " " + getSong.getGrade();
+                    }
+                }
+            }
+        }
     }
 }
