@@ -304,9 +304,9 @@
             // 
             this.flowLayoutPanel2.AutoScroll = true;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 31);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(699, 489);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(696, 467);
             this.flowLayoutPanel2.TabIndex = 0;
             this.flowLayoutPanel2.WrapContents = false;
             // 
@@ -324,9 +324,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 30);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(693, 495);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(696, 468);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 

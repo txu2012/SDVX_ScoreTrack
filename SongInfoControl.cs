@@ -20,6 +20,7 @@ namespace SDVX_ScoreTracker
         private string gra;
         private int level;
         private long sco;
+        private Song currSong;
 
         // Constructor to create control object
         /**
@@ -47,6 +48,7 @@ namespace SDVX_ScoreTracker
             gra = grade;
             sco = score;
             level = lvl;
+            currSong = new SDVX_ScoreTracker.Song(name, rom, level, difficulty, sco, gra,);
         }
 
         // Setters/Getters
@@ -97,9 +99,29 @@ namespace SDVX_ScoreTracker
          * */
         public long getScore() { return this.sco; }
 
+        /**
+         * Grabs and returns the current song
+         * @return currSong
+         * */
+        public Song getSong() { return currSong; }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            EditSongForm editSong = new EditSongForm();
+            DialogResult dialog = editSong.ShowDialog();
+            if (dialog == DialogResult.OK)
+            {
+                sco = editSong.getEditScore();
+                gra = editSong.getEditGrade();
+                currSong.updateScore(sco);
+                currSong.updateGrade(gra);
 
+                editSong.Dispose();
+            }
+            else if (dialog == DialogResult.Cancel)
+            {
+                editSong.Dispose();
+            }
         }
     }
 }
