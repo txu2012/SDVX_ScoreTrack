@@ -22,3 +22,4 @@ C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_Scor
 C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.Properties.Resources.resources
 C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.SongInfoControl.resources
 C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.csproj.GenerateResource.Cache
+C:\Users\Hotfinwax\Desktop\Projects\CSharp\SDVX_ScoreTracker\obj\Debug\SDVX_ScoreTracker.EditSongForm.resources

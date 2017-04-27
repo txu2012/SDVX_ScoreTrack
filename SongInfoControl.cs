@@ -48,7 +48,7 @@ namespace SDVX_ScoreTracker
             gra = grade;
             sco = score;
             level = lvl;
-            currSong = new SDVX_ScoreTracker.Song(name, rom, level, difficulty, sco, gra,);
+            currSong = new SDVX_ScoreTracker.Song(name, rom, level, difficulty, sco, gra);
         }
 
         // Setters/Getters
@@ -108,6 +108,8 @@ namespace SDVX_ScoreTracker
         private void button1_Click(object sender, EventArgs e)
         {
             EditSongForm editSong = new EditSongForm();
+            editSong.sendName(name);
+
             DialogResult dialog = editSong.ShowDialog();
             if (dialog == DialogResult.OK)
             {
@@ -115,6 +117,10 @@ namespace SDVX_ScoreTracker
                 gra = editSong.getEditGrade();
                 currSong.updateScore(sco);
                 currSong.updateGrade(gra);
+
+                Grade.Text = gra;
+                newScore.Text = sco.ToString();
+                SDVX_ScoreTracker.Layout.saveNewSongInfo(currSong);
 
                 editSong.Dispose();
             }

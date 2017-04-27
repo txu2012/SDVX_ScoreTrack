@@ -14,6 +14,7 @@ namespace SDVX_ScoreTracker
     {
         private long editScore;
         private string editGrade;
+        private string songName;
 
         public EditSongForm()
         {
@@ -32,10 +33,19 @@ namespace SDVX_ScoreTracker
             return editGrade;
         }
 
+        public void sendName(string name)
+        {
+            songName = name;
+            SongNameEdit.Text = name;
+        }
+
         private void saveEdit_Click(object sender, EventArgs e)
         {
+
             editScore = Convert.ToInt64(ScoreEdit.Text);
             editGrade = GradeEdit.Text;
+            Console.Write(editScore);
+            Console.Write(editGrade);
         }
 
         private void cancelEdit_Click(object sender, EventArgs e)

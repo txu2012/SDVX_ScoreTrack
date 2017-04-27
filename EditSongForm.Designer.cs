@@ -40,7 +40,7 @@
             // SongNameEdit
             // 
             this.SongNameEdit.AutoSize = true;
-            this.SongNameEdit.Location = new System.Drawing.Point(192, 23);
+            this.SongNameEdit.Location = new System.Drawing.Point(180, 23);
             this.SongNameEdit.Name = "SongNameEdit";
             this.SongNameEdit.Size = new System.Drawing.Size(35, 13);
             this.SongNameEdit.TabIndex = 0;

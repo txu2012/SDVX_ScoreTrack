@@ -22,10 +22,10 @@ namespace SDVX_ScoreTracker
         private int currentLevel;
         private CalculatorGrade calcGrade;
         private SongInfoRead songs;
-        private Dictionary<string, Song> dictSongs;
-        private Dictionary<string, Song> dictPlayedSongs;
-        private Dictionary<string, SongInfoControl> allUserControl;
-        private Dictionary<string, SongInfoControl> playedUserControl;
+        private static Dictionary<string, Song> dictSongs;
+        private static Dictionary<string, Song> dictPlayedSongs;
+        private static Dictionary<string, SongInfoControl> allUserControl;
+        private static Dictionary<string, SongInfoControl> playedUserControl;
 
         /*
          * Constructor
@@ -46,6 +46,11 @@ namespace SDVX_ScoreTracker
             displaySongs();
         }
 
+        public Layout(Song temp)
+        {
+            InitializeComponent();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             getScoreAndGrade();
@@ -60,6 +65,7 @@ namespace SDVX_ScoreTracker
             else
             {
                 currentSongName = songName.Text;
+                nameLabelDisplay.Text = currentSongName;
             }
 
             if (levelBox.Text == "")
@@ -73,7 +79,7 @@ namespace SDVX_ScoreTracker
 
             if (difBox.Text == "")
             {
-                currentDif = "Dif";
+                currentDif = "Difficulty";
             }
             else
             {
@@ -328,6 +334,25 @@ namespace SDVX_ScoreTracker
                     }
                 }
             }
+        }
+
+        public static void saveNewSongInfo(Song updatedInfo)
+        {
+            dictPlayedSongs[updatedInfo.getName()] = updatedInfo;
+            dictSongs[updatedInfo.getName()] = updatedInfo;
+            SDVX_ScoreTracker.Layout temp = new SDVX_ScoreTracker.Layout(updatedInfo);
+            temp.updateDisplay(updatedInfo);
+        }
+
+        private void resetBox()
+        {
+            criticalNum.Text = "";
+            nearNum.Text = "";
+            errorNum.Text = "";
+            songName.Text = "";
+            romajiBox.Text = "";
+            levelBox.Text = "";
+            difBox.Text = "";
         }
     }
 }

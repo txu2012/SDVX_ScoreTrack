@@ -55,6 +55,8 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.playedSongs = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.nameLabelDisplay = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.calc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +78,8 @@
             // calc
             // 
             this.calc.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.calc.Controls.Add(this.nameLabelDisplay);
+            this.calc.Controls.Add(this.nameLabel);
             this.calc.Controls.Add(this.label1);
             this.calc.Controls.Add(this.romajiBox);
             this.calc.Controls.Add(this.difLabel);
@@ -195,7 +199,7 @@
             // gradeVal
             // 
             this.gradeVal.AutoSize = true;
-            this.gradeVal.Location = new System.Drawing.Point(406, 410);
+            this.gradeVal.Location = new System.Drawing.Point(406, 419);
             this.gradeVal.Name = "gradeVal";
             this.gradeVal.Size = new System.Drawing.Size(15, 13);
             this.gradeVal.TabIndex = 11;
@@ -204,7 +208,7 @@
             // gradeLabel
             // 
             this.gradeLabel.AutoSize = true;
-            this.gradeLabel.Location = new System.Drawing.Point(234, 410);
+            this.gradeLabel.Location = new System.Drawing.Point(234, 419);
             this.gradeLabel.Name = "gradeLabel";
             this.gradeLabel.Size = new System.Drawing.Size(42, 13);
             this.gradeLabel.TabIndex = 10;
@@ -213,7 +217,7 @@
             // scoreVal
             // 
             this.scoreVal.AutoSize = true;
-            this.scoreVal.Location = new System.Drawing.Point(406, 378);
+            this.scoreVal.Location = new System.Drawing.Point(406, 387);
             this.scoreVal.Name = "scoreVal";
             this.scoreVal.Size = new System.Drawing.Size(13, 13);
             this.scoreVal.TabIndex = 9;
@@ -222,7 +226,7 @@
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Location = new System.Drawing.Point(234, 378);
+            this.scoreLabel.Location = new System.Drawing.Point(234, 387);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(41, 13);
             this.scoreLabel.TabIndex = 8;
@@ -330,6 +334,23 @@
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.WrapContents = false;
             // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(234, 358);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 13);
+            this.nameLabel.TabIndex = 22;
+            this.nameLabel.Text = "Name :\r\n";
+            // 
+            // nameLabelDisplay
+            // 
+            this.nameLabelDisplay.AutoSize = true;
+            this.nameLabelDisplay.Location = new System.Drawing.Point(406, 358);
+            this.nameLabelDisplay.Name = "nameLabelDisplay";
+            this.nameLabelDisplay.Size = new System.Drawing.Size(0, 13);
+            this.nameLabelDisplay.TabIndex = 23;
+            // 
             // Layout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,6 +399,8 @@
         private System.Windows.Forms.TextBox levelBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox romajiBox;
+        private System.Windows.Forms.Label nameLabelDisplay;
+        private System.Windows.Forms.Label nameLabel;
     }
 }
 
